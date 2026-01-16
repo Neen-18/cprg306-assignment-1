@@ -96,7 +96,7 @@ ul {
 }
 
 ul li {
-  background: #0b0e18;
+  background: rgba(127, 140, 255, 0.25);
   color: #dcdfe6;
   margin-bottom: 0.5rem;
   padding: 0.5rem;
@@ -112,6 +112,11 @@ ul li:hover {
 
 ul li:last-child {
   margin-bottom: 0;
+}
+
+.list-container {
+  display: flex;
+  gap: 50px;
 }
 
 /* Error message styles */
