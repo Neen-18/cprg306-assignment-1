@@ -80,7 +80,7 @@ function displayCharacterNamesSafe(characterArray, listId, errorDivId) {
   const list = document.getElementById(listId);
 
   characterArray.forEach((character, index) => {
-    if (!character || !("name" in character)) {
+    if (!character.name) {
       logAndDisplayError(
         `Error: character at index ${index} is missing a "name" property. Object: ${JSON.stringify(character)}`,
         errorDivId
@@ -100,7 +100,7 @@ function displayCharacterFilteredAgeSafe(characterArray, ageThreshold, listId, e
   const ageFilteredCharacters = characterArray.filter(character => character.age < ageThreshold);
 
   ageFilteredCharacters.forEach((character, index) => {
-    if (!("name" in character)) {
+    if (!character.name) {
       logAndDisplayError(
         `Error: filtered character at index ${index} is missing a "name" property. Object: ${JSON.stringify(character)}`,
         errorDivId
